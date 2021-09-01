@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<conio.h>
+class test
+{
+int code;
+static int count;
+public:
+	void setcode()
+	{
+	 code=++count;
+	}
+	void showcode()
+	{
+	cout<<"code is "<<code<<endl;
+	}
+	static void showcount()
+	{
+	 cout<<"count is "<<count<<endl;
+	}
+};
+int test::count;
+void main()
+{
+clrscr();
+test t1,t2,t3;
+t1.setcode();
+t2.setcode();
+t3.setcode();
+test::showcount();
+t1.showcode();
+t2.showcode();
+t3.showcode();
+getch();
+}
